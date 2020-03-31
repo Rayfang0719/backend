@@ -27,7 +27,7 @@ app.get('/warranty',(req,res)=>{
     // var pathName ="out"+n+".csv";
     const createCsvWriter = require('csv-writer').createObjectCsvWriter;
     const csvWriter = createCsvWriter({
-      path: "./public/out.csv",
+      path: "./public/warranty.csv",
       header: [
         { id: 'invoiceNum', title: 'Invocie Number' },
         // { id: 'description', title: 'oldDescription' },
