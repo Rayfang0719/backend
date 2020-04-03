@@ -4,11 +4,11 @@ const app = express();
 app.use(express.static('./public'));
 const nodemailer = require("nodemailer");
 // const routers = require('./routers');
-// app.all('*',(req,res,next)=>{
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
-//     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
-// })
+app.all('*',(req,res,next)=>{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+})
 app.get('/warranty',(req,res)=>{
     res.send({msg:200})
     // const query=queryString.parse(req.query);
