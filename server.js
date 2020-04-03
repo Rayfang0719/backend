@@ -21,7 +21,13 @@ app.get('/warranty',(req,res)=>{
     var lastName = name.lastName;
      console.log(country)
     var csv = [];
-    csv.push({invoiceNum,firstName,lastName,email,country,marketPlace,subscribe})
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+var date = mm + '/' + dd + '/' + yyyy;
+    csv.push({invoiceNum,firstName,lastName,email,country,marketPlace,subscribe,date})
 
 
     // var pathName ="out"+n+".csv";
@@ -39,6 +45,8 @@ app.get('/warranty',(req,res)=>{
 
         { id: 'marketPlace', title: 'Market Place' },
         { id: 'subscribe', title: 'Subscription' },
+          { id: 'date', title: 'Subscription Time' }
+          
 
 
       ],
