@@ -92,5 +92,5 @@ async function main() {
 // app.use(routers);
 })
 app.listen(5858,()=>{
-    console.log("server is running on 5858")
+    console.log("cd backend server is running on 5858")
 })
