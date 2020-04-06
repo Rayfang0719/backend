@@ -19,7 +19,7 @@ app.get('/warranty',(req,res)=>{
    var  firstName = name.firstName;
   
     var lastName = name.lastName;
-     console.log(country)
+     console.log(subscribe,"subscribe")
     var csv = [];
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
